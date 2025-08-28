@@ -1,3 +1,3 @@
 #!/bin/bash
 
-latexmk -pdf -interaction=nonstopmode -shell-escape $1
+latexmk -pdf -interaction=nonstopmode -auxdir=aux_files $1

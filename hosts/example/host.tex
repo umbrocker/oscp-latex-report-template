@@ -73,10 +73,31 @@ by OJ Reeves (@TheColonial) & Christian Mehlmauer (@_FireFart_)
 ===============================================================	
 \end{lstlisting}
 
+\begin{listing}[!ht]
+\centering
+\begin{minted}{python}
+import random
+
+def main():
+  x = random.randint(0,100)
+  print(x)
+
+if __name__ == '__main__':
+  main()
+
+\end{minted}
+\caption{Apád faszát}
+\label{lst:fasz}
+\end{listing}
+
+
+
+
 Browsing to \url{http://XX.XX.XX.XX//example_backdoor.php} retrieved a management interface. 
 \texttt{} 
 
 \begin{figure}[H]
+  \centering
 	\includegraphics [width=.75\textwidth]{./hosts/\hostname/image1.png}
 	\caption{Management interface. Note: Image sourced from \nolinkurl{http://www.apachegui.net/images/Control.png}.}
 	\label{fig:obviouscreds}
@@ -84,11 +105,13 @@ Browsing to \url{http://XX.XX.XX.XX//example_backdoor.php} retrieved a managemen
 
 The management interface authentication used weak credentials. \osid\ logged in with username \texttt{Admin} and password \texttt{Password}.
 
+
 \osid\ then did stuff to gain a low-privilege remote shell.
 
 After doing stuff, \osid\ exfiltrated evidence of the low-privilege shell.
 
 \begin{figure}[H]
+  \centering
 	\includegraphics [width=.75\textwidth]{./hosts/\hostname/image2.png}
 	\caption{Proof of succesful low-privilege remote access to \fullhostname. Note: Image sourced from \url{https://support.offensive-security.com/oscp-exam-guide/}. Ensure \texttt{type} or \texttt{cat} are used to print the flag and \texttt{ipconfig} or its counterparts to display the machine's address.}
 \end{figure}
@@ -108,6 +131,7 @@ The vendors of \os\ are aware of the privilege escalation vulnerability\footnote
 \osid\ was then able to exfiltrate the \nolinkurl{proof.txt} key and network configuration.
 
 \begin{figure}[H]
+  \centering
 	\includegraphics [width=.75\textwidth]{./hosts/\hostname/image2.png}
 	\caption{Proof of successful \textit{root} access to \fullhostname. \\Note: Image sourced from \url{https://support.offensive-security.com/oscp-exam-guide/}. Ensure \texttt{type} or \texttt{cat} are used to print the flag and \texttt{ipconfig} or its counterparts to display the machine's address.}
 \end{figure}

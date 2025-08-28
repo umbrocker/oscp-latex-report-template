@@ -1,5 +1,11 @@
 \catcode`\_=12
 \usepackage{fancyvrb}
+\usepackage{minted}
+\setminted{
+  linenos,
+  breaklines=true,
+  autogobble=true
+}
 \newcommand{\footnoteref}[1]{\footnote{See footnote \ref{#1}.}}
 \newcommand{\fullhostname}{\textit{\hostname\ (\ip)}}
 \usepackage{tabularx}
@@ -8,5 +14,11 @@
 \newcommand{\definevulnf}[3]{\DeclareRobustCommand{#1}{\textit{#2}\footnote{#3}}}
 
 \setlength{\parskip}{1em}
-
 %\usepackage[htt]{hyphenat} 
+
+
+%\DeclareCaptionType[fileext=prg]{mycode}[code]
+%\setcounter{mycode}{0}
+%\renewcommand{\themycode}{\arabic{section}.\arabic{mycode}}
+%\numberwithin{mycode}{section}
+%\captionsetup[mycode]{labelfont={it, small},textfont={it, small},labelsep=colon}
