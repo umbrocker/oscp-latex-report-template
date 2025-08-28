@@ -7,5 +7,10 @@ Note that details in this template have been fabricated for purposes of example.
 Check out ./maindocument.pdf to see what this template looks like.
 
 ## Guide
+### Installing dependencies
+```bash
+sudo apt update && sudo apt install latexmk biber -y
+```
+### Usage
 
 To create sections about more boxes, duplicate ./hosts/example, change name variables accordingly, and input the folder's host.tex file in *maindocument.tex* in the 'BOX_RUNDOWNS' section.
